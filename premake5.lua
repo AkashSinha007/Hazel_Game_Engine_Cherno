@@ -27,6 +27,7 @@ project "Hazel"
 
 	includedirs 
 	{
+		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include"
 	}
 
@@ -52,11 +53,11 @@ project "Hazel"
 
 	filter "configurations:Release"
 		defines "HZ_RELEASE"
-		symbols "On"
+		optimize "On"
 
 	filter "configurations:Dist"
 		defines "HZ_DIST"
-		symbols "On"
+		optimize "On"
 
 
 
@@ -103,8 +104,8 @@ project "Sandbox"
 
 	filter "configurations:Release"
 		defines "HZ_RELEASE"
-		symbols "On"
+		optimize "On"
 
 	filter "configurations:Dist"
 		defines "HZ_DIST"
-		symbols "On"
+		optimize "On"
